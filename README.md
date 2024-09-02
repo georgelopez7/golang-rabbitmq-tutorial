@@ -8,6 +8,8 @@ Check out the article associated with this project [here](https://medium.com/@ge
 
 Below you can see a diagram of the system architecture for this project:
 
+![golang-rabbitmq-tutorial-diagram](https://github.com/user-attachments/assets/a4b0a8ad-064c-4c77-a773-0835652283c3)
+
 ## Getting Started
 
 Follow the steps below to get started with the project:

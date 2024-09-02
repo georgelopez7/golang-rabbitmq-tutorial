@@ -1,90 +1,43 @@
-<div align="center">
+# Golang RabbitMQ Tutorial
 
-  <img src="assets/logo.png" alt="logo" width="200" height="auto" />
-  <h1>Golang RabbitMQ Tutorial</h1>
-  
-  <p>
-    A project t learn how to use RabbitMQ with Golang!
-  </p>
+In this project, we will learn how to use RabbitMQ with Golang.
 
-<br />
+Check out the article associated with this project [here](https://medium.com/@georgelopez7/golang-rabbitmq-tutorial-part-1-introduction-to-rabbitmq-and-golang-e9f3f6f4f5a9).
 
-<!-- Table of Contents -->
+## System Architecture
 
-# :notebook_with_decorative_cover: Table of Contents
+Below you can see a diagram of the system architecture for this project:
 
-- [About the Project](#star2-about-the-project)
-  - [System Architecture](#system-architecture)
-- [Getting Started](#toolbox-getting-started)
-  - [Prerequisites](#bangbang-prerequisites)
-  - [Installation](#gear-installation)
-  - [Run Locally](#running-run-locally)
+## Getting Started
 
-<!-- About the Project -->
+Follow the steps below to get started with the project:
 
-## :star2: About the Project
+### Prerequisites
 
-<!-- Screenshots -->
+The only real requirement for this project is Docker Desktop.
 
-### :camera: System Architecture
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
-<div align="center"> 
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
-</div>
+### Running the project locally
 
-<!-- Getting Started -->
+A step by step series of examples that tell you how to get a development
+environment running
 
-## :toolbox: Getting Started
+Clone the repository
 
-<!-- Prerequisites -->
-
-### :bangbang: Prerequisites
-
-This project requires the following:
-
-- Docker Desktop
-- P
-
-<!-- Installation -->
-
-### :gear: Installation
-
-Install my-project with npm
-
-```bash
-  yarn install my-project
-  cd my-project
-```
-
-<!-- Run Locally -->
-
-### :running: Run Locally
-
-Clone the project
-
-```bash
-  git clone https://github.com/georgelopez7/golang-rabbitmq-tutorial.git
-```
+    git clone https://github.com/georgelopez7/golang-rabbitmq-tutorial.git
 
 Go to the project directory
 
-```bash
-  cd golang-rabbitmq-tutorial
-```
+    cd golang-rabbitmq-tutorial
 
-Run the docker-compose file
+Run the docker compose file
 
-```bash
-  docker compose up --build
-```
+    docker compose up --build
 
-<!-- Usage -->
+### Testing the project
 
-## :eyes: Usage
-
-You can access the server at http://localhost:8080
-
-Send a POST request to http://localhost:8080/api/v1/orders with the following body:
+Now that we have the project running, we can test it by sending a POST request to `http://localhost:8080/api/v1/orders` with the following body:
 
 ```json
 {

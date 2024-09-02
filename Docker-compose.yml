@@ -1,0 +1,35 @@
+version: '3.8'
+name: Golang-RabbitMQ-Tutorial
+services:
+  
+  rabbitMQ:
+    image: rabbitmq:3-management
+    container_name: golang-rabbitmq-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 30s
+      timeout: 30s
+      retries: 3
+
+  golang-rabbitmq-server:
+    build: ./server
+    container_name: golang-rabbitmq-server
+    ports:
+      - "8080:8080"
+    environment:
+      RABBITMQ_CONNECTION_URL: amqp://guest:guest@rabbitMQ:5672/
+    depends_on:
+      rabbitMQ: 
+        condition: service_healthy
+    
+  golang-rabbitmq-consumer:
+    build: ./consumer
+    container_name: golang-rabbitmq-consumer
+    environment:
+      RABBITMQ_CONNECTION_URL: amqp://guest:guest@rabbitMQ:5672/
+    depends_on:
+      rabbitMQ: 
+        condition: service_healthy

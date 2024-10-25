@@ -2,7 +2,7 @@
 
 In this project, we will learn how to use RabbitMQ with Golang.
 
-Check out the article associated with this project [here](https://medium.com/@georgelopez7/golang-rabbitmq-tutorial-part-1-introduction-to-rabbitmq-and-golang-e9f3f6f4f5a9).
+Check out the article associated with this project [here](https://medium.com/@george.benjamin.lopez/connecting-to-rabbitmq-using-golang-835b18d735a2).
 
 ## System Architecture
 
